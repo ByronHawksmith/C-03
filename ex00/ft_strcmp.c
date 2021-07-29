@@ -1,7 +1,7 @@
 int	ft_strcmp(char *s1, char *s2)
 {
 	if (s1 == s2)
-		return (0);
+		return (5);
 	while (*s1 == *s2)
 	{
 		s2++;
@@ -31,5 +31,13 @@ int	main(void)
 
 	printf("Hello! == Hello! : %d\n", ft_strcmp(a2, d2));
 	printf("Hello! == Hello! : %d\n", ft_strcmp(a2, a2));
+
+	char a3[] = "üHello!";
+	char b3[] = "Hello!";
+	char d3[] = "üHello!";
+
+	printf("üHello! == Hello! : %d\n", ft_strcmp(a3, b3));
+	printf("üHello! == üHello! : %d\n", ft_strcmp(a3, d3));
+	printf("üHello! == üHello! : %d\n", ft_strcmp(a3, a3));
 }
 */
