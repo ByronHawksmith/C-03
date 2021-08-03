@@ -35,17 +35,29 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 /*
 #include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	char a2[7] = "Hello!\0";
-	char d2[13] = "Apples\0";
+	char a[7] = "Hello!\0";
+	char b[13] = "abcd\0";
 
-	printf("Src before : %s\n", a2);
-	printf("Dest before : %s\n", d2);
+	printf("FT Src before : %s\n", a);
+	printf("FT Dest before : %s\n", b);
 
-	ft_strlcat(d2, a2, 3);
+	ft_strlcat(b, a, 13);
 
-	printf("Src after : %s\n", a2);
-	printf("Dest after : %s\n", d2);
+	printf("FT Src after : %s\n", a);
+	printf("FT Dest after : %s\n", b);
+	
+	char c[7] = "Hello!\0";
+	char d[13] = "abcd\0";
+
+	printf("Src before : %s\n", c);
+	printf("Dest before : %s\n", d);
+
+	strlcat(d, c, 13);
+
+	printf("Src after : %s\n", c);
+	printf("Dest after : %s\n", d);
 }
 */
