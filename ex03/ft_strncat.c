@@ -5,17 +5,17 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 	concat = dest;
 	i = 0;
-	while (*dest)
-		dest++;
+	while (*concat)
+		concat++;
 	while (*src && i < nb)
 	{
-		*dest = *src;
-		dest++;
+		*concat = *src;
+		concat++;
 		src++;
 		i++;
 	}
-	*dest = 0;
-	return (concat);
+	*concat = 0;
+	return (dest);
 }
 
 /*
