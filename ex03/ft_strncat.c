@@ -1,6 +1,6 @@
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	*concat;
+	char			*concat;
 	unsigned int	i;
 
 	concat = dest;
@@ -22,14 +22,14 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 #include <stdio.h>
 int	main(void)
 {
-	char a2[] = "Hello!";
-	char d2[] = "Hello!";
+	char a2[12] = "Hello!";
+	char d2[6] = "Hello!";
 
 	printf("Hello!Hello! : %s\n", ft_strncat(a2, d2, 3));
 
-	char a3[] = "üHello!";
+	char a3[13] = "üHello!";
 	char b3[] = "Hello!";
-	char c3[] = "üHello!";
+	char c3[14] = "üHello!";
 	char d3[] = "Second";
 
 	printf("üHello!Hello! : %s\n", ft_strncat(a3, b3, 4));
