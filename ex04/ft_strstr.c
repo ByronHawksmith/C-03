@@ -1,20 +1,20 @@
 char	*ft_strstr(char *str, char *to_find)
 {
-	char	*a;
-	char	*b;
+	char	*s_c;
+	char	*tf_c;
 
 	if (!*to_find)
 		return (str);
 	while (*str)
 	{
-		a = str;
-		b = to_find;
-		while (*b && *a == *b)
+		s_c = str;
+		tf_c = to_find;
+		while (*tf_c && *s_c == *tf_c)
 		{
-			a++;
-			b++;
+			s_c++;
+			tf_c++;
 		}
-		if (*b == 0)
+		if (*tf_c == 0)
 			return (str);
 		str++;
 	}
@@ -27,7 +27,7 @@ char	*ft_strstr(char *str, char *to_find)
 int	main(void)
 {
 	char* haystack = "Hello1234";
-	char* needle = "5";
+	char* needle = "3";
 	char* result = ft_strstr(haystack, needle);
 	char* result2 = strstr(haystack, needle);
 	printf("%s\n", result);
