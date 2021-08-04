@@ -1,6 +1,6 @@
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (s1 == s2)
@@ -42,6 +42,30 @@ int	main(void)
 
 	printf("(First 1) üHello! == Hello! : %d\n", ft_strncmp(a3, b3, 1));
 	printf("(First 1) üHello! == üHello! : %d\n", ft_strncmp(a3, d3, 1));
-	printf("(First 2) üHello! == üHello! : %d\n", ft_strncmp(a3, a3, 2));
+	printf("(First 2) üHello! == üHello! : %d\n\n\n", ft_strncmp(a3, a3, 2));
+	
+	char *aa = "Hello!";
+	char *bb = "Hello2!";
+	char *cc = "Hello3!";
+	char *dd = "Hello!";
+
+	printf("(First 4) Hello! == Hello2! : %d\n", ft_strncmp(aa, bb, 4));
+	printf("(First 5) Hello! == Hello3! : %d\n", ft_strncmp(aa, cc, 5));
+	printf("(All 6) Hello! == Hello! : %d\n", ft_strncmp(aa, dd, 6));
+	printf("(All 6) Hello! == Hello! : %d\n", ft_strncmp(aa, aa, 6));
+	
+	char aa2[] = "Hello!";
+	char dd2[] = "Hello!";
+
+	printf("(First 3) Hello! == Hello! : %d\n", ft_strncmp(aa2, dd2, 3));
+	printf("(First 3) Hello! == Hello! : %d\n", ft_strncmp(aa2, aa2, 3));
+
+	char aa3[] = "üHello!";
+	char bb3[] = "Hello!";
+	char dd3[] = "üHello!";
+
+	printf("(First 1) üHello! == Hello! : %d\n", ft_strncmp(aa3, bb3, 1));
+	printf("(First 1) üHello! == üHello! : %d\n", ft_strncmp(aa3, dd3, 1));
+	printf("(First 2) üHello! == üHello! : %d\n", ft_strncmp(aa3, aa3, 2));
 }
 */
